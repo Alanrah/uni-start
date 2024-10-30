@@ -19,6 +19,7 @@
 			<view >view是块状元素</view>
 			<view >view是块状元素{{a}}</view>
 		</scroll-view>
+		<navigator url="/pages/mine/mine">mine</navigator>
 	</view>
 </template>
 
