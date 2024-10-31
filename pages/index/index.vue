@@ -2,8 +2,10 @@
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area" hover-class="text-hover" hover-start-time="0" hover-stay-time="0">
-			<text class="title" selectable="true">{{title}}</text>
+			<text class="title" user-select>{{title}}</text>
 		</view>
+		<!-- 注意：如果小程序显示组件被过滤，但是h5显黑正常，就清空微信小程序工具缓存再试一下 -->
+		<user-info></user-info>
 		<!--  view.box2 enter 自动补全 -->
 		<view class="box2"></view>
 		<scroll-view class="scroll-i" scroll-y scroll-with-animation>
@@ -17,15 +19,21 @@
 			<view >view是块状元素</view>
 			<view >view是块状元素</view>
 			<view >view是块状元素</view>
-			<view >view是块状元素{{a}}</view>
+			<view >view是块状元素</view>
 		</scroll-view>
-		<navigator url="/pages/mine/mine">mine</navigator>
+		<navigator url="/pages/mine/mine?name=yaru&age=12">mine</navigator>
 	</view>
 </template>
 
 <script setup>
 	import {ref} from 'vue';
-	const a = ref(9);
+	import { onReady } from '@dcloudio/uni-app'
+	
+	const title = ref(90);
+	
+	onReady(() => {
+	      console.log('onReady')
+	    })
 </script>
 
 <style lang="scss">

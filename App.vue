@@ -1,4 +1,5 @@
 <script>
+	// 应用生命周期 https://uniapp.dcloud.net.cn/collocation/App.html#applifecycle  
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
