@@ -1,24 +1,19 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [ 
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "百姓生活"
-			}
+				"navigationBarTitleText": "百姓生活",
+				"navigationBarBackgroundColor": "#CAF0DF"
+			},
+			"needLogin": false
 		},
 		{
-			"path" : "pages/list/list",
+			"path" : "pages/comment/comment",
 			"style" : 
 			{
-				"navigationBarTitleText" : "百姓关注",
+				"navigationBarTitleText" : "我要留言",
 				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path" : "pages/login/login",
-			"style" : 
-			{
-				"navigationBarTitleText" : "登录"
 			}
 		},
 		{
@@ -27,13 +22,45 @@
 			{
 				"navigationBarTitleText" : "我的 "
 			}
+		},
+		{
+			"path" : "pages/login/login",
+			"style" : 
+			{
+				"navigationBarTitleText" : "登录",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "百姓关注",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"enablePullDownRefresh": true,
+		"backgroundColor": "#CAF0DF",
+		"onReachBottomDistance": 60
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ccc",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/icon-index.png",
+			"selectedIconPath": "static/icon-index-active.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/comment/comment",
+			"iconPath": "static/icon-comment.png",
+			"selectedIconPath": "static/icon-comment-active.png",
+			"text": "留言"
+		},{
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/icon-mine.png",
+			"selectedIconPath": "static/icon-mine-active.png",
+			"text": "我的"
+		}]
 	},
 	"uniIdRouter": {}
 }

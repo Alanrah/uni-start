@@ -21,7 +21,8 @@
 			<view >view是块状元素</view>
 			<view >view是块状元素</view>
 		</scroll-view>
-		<navigator url="/pages/mine/mine?name=yaru&age=12">mine</navigator>
+		 <!-- 注意： open-type 不同，页面路由的变化不同，执行的生命周期钩子不同 -->
+		<navigator url="/pages/mine/mine?name=yaru&age=12" open-type="switchTab">mine</navigator>
 	</view>
 </template>
 

@@ -17,6 +17,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+@import "../../common/scss/user.scss";
 
 </style>
