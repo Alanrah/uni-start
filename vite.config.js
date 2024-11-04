@@ -1,0 +1,19 @@
+// https://uniapp.dcloud.net.cn/collocation/vite-config.html
+import {
+	defineConfig
+} from 'vite'
+import uni from '@dcloudio/vite-plugin-uni'
+import AutoImport from 'unplugin-auto-import/vite';
+export default defineConfig({
+	plugins: [
+		uni(),
+		//自动导入配界
+		AutoImport({
+			imports: [
+				//预设
+				'vue',
+				'uni-app'
+			],
+		})
+	],
+})

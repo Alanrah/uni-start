@@ -27,8 +27,9 @@
 </template>
 
 <script setup>
-	import {ref} from 'vue';
-	import { onReady } from '@dcloudio/uni-app'
+	// 注意： 使用了 unplugin-auto-import/vite ，引用会被自动引入
+	// import {ref} from 'vue';
+	// import { onReady } from '@dcloudio/uni-app'
 	
 	const title = ref(90);
 	
