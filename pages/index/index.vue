@@ -23,6 +23,7 @@
 		</scroll-view>
 		 <!-- 注意： open-type 不同，页面路由的变化不同，执行的生命周期钩子不同 -->
 		<navigator url="/pages/mine/mine?name=yaru&age=12" open-type="switchTab">mine</navigator>
+		<button @click="refresh">点击刷新</button>
 	</view>
 </template>
 
@@ -33,9 +34,33 @@
 	
 	const title = ref(90);
 	
+	const refresh = () => {
+		uni.startPullDownRefresh();
+		setTimeout(() => {
+			uni.stopPullDownRefresh();
+			}, 3000)
+	}
+	// 和refresh其实是一样的
+	// function onPullDownRefresh() {
+	// 	console.log('refresh');
+	// 	setTimeout(function () {
+	// 		uni.stopPullDownRefresh();
+	// 	}, 1000);
+	// }
+	
 	onReady(() => {
 	      console.log('onReady')
-	    })
+		  uni.showToast({
+			  // 注意： title 文本在小程序平台最多显示 7 个汉字长度
+			  title: '欢迎进入uni-start',
+			  icon: 'success',
+			  duration: 3000,
+		  });
+		  uni.setTabBarBadge({
+			  index: 0,
+			  text: '99',
+		  });
+	    });
 </script>
 
 <style lang="scss">

@@ -13,14 +13,16 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "我要留言",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fee2e2"
 			}
 		},
 		{
 			"path" : "pages/mine/mine",
 			"style" : 
 			{
-				"navigationBarTitleText" : "我的 "
+				"navigationBarTitleText" : "我的 ",
+				"navigationBarBackgroundColor": "#f3e8ff"
 			}
 		},
 		{
@@ -29,6 +31,13 @@
 			{
 				"navigationBarTitleText" : "登录",
 				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/comment-detail/comment-detail",
+			"style" : 
+			{
+				"navigationBarTitleText" : "留言详情"
 			}
 		}
 	],
@@ -43,8 +52,8 @@
 	"tabBar": {
 		"color": "#7A7E83",
 		"selectedColor": "#3cc51f",
-		"borderStyle": "black",
-		"backgroundColor": "#ccc",
+		"borderStyle": "white",
+		"backgroundColor": "#CAF0DF",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath": "static/icon-index.png",
