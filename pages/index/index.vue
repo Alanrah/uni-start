@@ -24,6 +24,7 @@
 		 <!-- 注意： open-type 不同，页面路由的变化不同，执行的生命周期钩子不同 -->
 		<navigator url="/pages/mine/mine?name=yaru&age=12" open-type="switchTab">mine</navigator>
 		<button @click="refresh">点击刷新</button>
+		<button @click="goCat">去萌宠案例</button>
 	</view>
 </template>
 
@@ -47,7 +48,11 @@
 	// 		uni.stopPullDownRefresh();
 	// 	}, 1000);
 	// }
-	
+	const goCat = () => {
+		uni.navigateTo({
+			url: '/pages/cat-pic-list/cat-pic-list'
+		});
+	}
 	onReady(() => {
 	      console.log('onReady')
 		  uni.showToast({

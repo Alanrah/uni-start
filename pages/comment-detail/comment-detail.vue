@@ -8,12 +8,17 @@
 </template>
 
 <script setup>
-const item = ref({title: '', body: ''})
-onLoad((hook) => {
+const item = ref({})
+onLoad(async(hook) => {
 	// 这是页面的query参数
 	console.log(hook);
-	item.value = hook;
-	uni.setStorageSync('title', hook.title);
+	const res = await uni.request({
+		url: `https://jsonplaceholder.typicode.com/posts/${hook.id}`,
+		method: 'GET',
+		header: {},
+	});
+	item.value = res.data;
+	uni.setStorageSync('title', item.value.title);
 });
 </script>
 

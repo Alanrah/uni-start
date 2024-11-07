@@ -1,6 +1,6 @@
 <template>
 	<view class="box">
-		<view v-for="item in list" :key="item.id"  class="list-item" @click="goDetail(item)">
+		<view v-for="item in list" :key="item.id"  class="list-item" @click="goDetail(item.id)">
 			<view class="title">{{item.title}}</view>
 			<view class="body">{{item.body}}</view>
 		</view>
@@ -36,9 +36,9 @@ const  getList = async () => {
 	});
 	list.value = res.data;
 }
-const goDetail = (item) => {
+const goDetail = (id) => {
 	uni.navigateTo({
-		url: `/pages/comment-detail/comment-detail?title=${item.title}&body=${item.body}`
+		url: `/pages/comment-detail/comment-detail?id=${id}`
 	})
 }
 
