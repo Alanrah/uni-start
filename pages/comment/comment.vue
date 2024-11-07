@@ -1,18 +1,67 @@
 <template>
-	<view>
-		<view @click="goDetail">这是去详情的页面</view>
+	<view class="box">
+		<view v-for="item in list" :key="item.id"  class="list-item" @click="goDetail(item)">
+			<view class="title">{{item.title}}</view>
+			<view class="body">{{item.body}}</view>
+		</view>
 	</view>
 </template>
 
 <script setup>
 
-const goDetail = () => {
+const list = ref([]);
+const  getList = async () => {
+	// 1.回调请求方法
+	// uni.request({
+	// 	url: 'https://jsonplaceholder.typicode.com/posts',
+	// 	method: 'GET',
+	// 	header: {},
+	// 	success: (res) => {
+	// 		list.value = res.data;
+	// 	}
+	// });  
+	// 2.异步then
+	// uni.request({
+	// 	url: 'https://jsonplaceholder.typicode.com/posts',
+	// 	method: 'GET',
+	// 	header: {},
+	// }).then((res) => {
+	// 		list.value = res.data;
+	// 	});
+	// 3.async await 
+	const res = await uni.request({
+		url: 'https://jsonplaceholder.typicode.com/posts',
+		method: 'GET',
+		header: {},
+	});
+	list.value = res.data;
+}
+const goDetail = (item) => {
 	uni.navigateTo({
-		url: '/pages/comment-detail/comment-detail?source=comment'
+		url: `/pages/comment-detail/comment-detail?title=${item.title}&body=${item.body}`
 	})
 }
+
+getList();
+
 </script>
 
-<style>
-	       
+<style lang="scss" scoped>
+.box {
+	padding: 30rpx;
+	.list-item {
+		border-bottom: 1px solid #cfcfcf;
+		padding: 20rpx 0;
+		font-size: 32rpx;
+		.title {
+			font-weight: 600;
+			margin-right: 10rpx;
+		}
+		.body {
+			font-size: 32rpx;
+			color:#ccc;
+		}
+	}
+}
+
 </style>

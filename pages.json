@@ -37,7 +37,8 @@
 			"path" : "pages/comment-detail/comment-detail",
 			"style" : 
 			{
-				"navigationBarTitleText" : "留言详情"
+				"navigationBarTitleText" : "留言详情",
+				"navigationBarBackgroundColor": "#CAF0DF"
 			}
 		}
 	],
