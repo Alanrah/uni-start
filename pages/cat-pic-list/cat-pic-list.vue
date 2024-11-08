@@ -11,7 +11,7 @@
 					<image lazy-load :src="item.url" mode="widthFix" @click="onPreview(index)"></image>
 				</view>
 				<view class="text">{{item.content}}</view>
-				<view class="author">—— {{item.author}}</view>
+				<view class="author">作者—— {{item.author}} X {{item.height}}</view>
 			</view>
 		</view>		
 		
@@ -55,7 +55,8 @@ const onPreview = function (index){
 	let urls = pets.value.map(item=>item.url);	
 	uni.previewImage({
 		current:index,
-		urls
+		urls,
+		showmenu: true
 	}) 
 }
 
@@ -75,19 +76,23 @@ const onTop = ()=>{
 function network(){
 	uni.showNavigationBarLoading()
 	uni.request({
+		// 宠物图片api：https://api.thecatapi.com/v1/images/search?limit=1   // 接口太慢
+		// https://jsonplaceholder.typicode.com/photos  
+		// https://tea.qingnian8.com/tools/petshow 
 		url:"https://tea.qingnian8.com/tools/petShow",
+		method: "GET",
 		data:{
-			size:5,
+			// limit:10,
+			size: 5,
 			type:classify[current.value].key
 		},
 		header:{
-			"access-key":"xxm123321@#"
+			"access-key":"095060"
 		}
-	}).then(res=>{		
-		if(res.data.errCode===0){			
+	}).then(res=>{	
+		if(res.data.errCode === 0){			
 			pets.value = [...pets.value,...res.data.data]
-			console.log(pets.value);
-		}else if(res.data.errCode === 400){
+		}else {
 			uni.showToast({
 				title:res.data.errMsg,
 				icon:"none"
@@ -95,7 +100,7 @@ function network(){
 		}		
 	}).catch(err=>{		
 		uni.showToast({
-			title:"请求有误，请重新刷新",
+			title: JSON.stringify(err),
 			icon:"none"
 		})
 	}).finally(()=>{
@@ -169,7 +174,7 @@ network();
 		.item{
 			width: 90rpx;
 			height: 90rpx;
-			background: rgba(255,255,255,0.9);
+			background: rgba(255,255,255,0.6);
 			border-radius: 50%;
 			margin-bottom:20rpx;
 			display: flex;

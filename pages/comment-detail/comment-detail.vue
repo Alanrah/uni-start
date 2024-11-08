@@ -2,7 +2,7 @@
 	<view class="box">
 		<view class="list-item">
 			<view class="title">{{item.title}}</view>
-			<view class="body">{{item.body}}</view>
+			<view class="body">{{item.content}}</view>
 		</view>
 	</view>
 </template>
@@ -13,11 +13,16 @@ onLoad(async(hook) => {
 	// 这是页面的query参数
 	console.log(hook);
 	const res = await uni.request({
-		url: `https://jsonplaceholder.typicode.com/posts/${hook.id}`,
-		method: 'GET',
-		header: {},
+		url: `https://tea.qingnian8.com/xzs/news/detail`,
+		method: 'POST',
+		data: {
+			id: hook.id
+		},
+		header:{
+			"access-key":"095060"
+		}
 	});
-	item.value = res.data;
+	item.value = res.data.data;
 	uni.setStorageSync('title', item.value.title);
 });
 </script>

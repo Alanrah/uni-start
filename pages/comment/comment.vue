@@ -1,8 +1,8 @@
 <template>
 	<view class="box">
-		<view v-for="item in list" :key="item.id"  class="list-item" @click="goDetail(item.id)">
+		<view v-for="item in list" :key="item.id"  class="list-item" @click="goDetail(item._id)">
 			<view class="title">{{item.title}}</view>
-			<view class="body">{{item.body}}</view>
+			<view class="body">{{item.content}}</view>
 		</view>
 	</view>
 </template>
@@ -30,11 +30,16 @@ const  getList = async () => {
 	// 	});
 	// 3.async await 
 	const res = await uni.request({
-		url: 'https://jsonplaceholder.typicode.com/posts',
-		method: 'GET',
-		header: {},
+		url: 'https://tea.qingnian8.com/xzs/news/get',
+		method: 'POST',
+		data: {
+			limit: 100,
+		},
+		header:{
+			"access-key":"095060"
+		}
 	});
-	list.value = res.data;
+	list.value = res.data.data;
 }
 const goDetail = (id) => {
 	uni.navigateTo({
