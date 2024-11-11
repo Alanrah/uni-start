@@ -11,7 +11,7 @@
 					<image lazy-load :src="item.url" mode="widthFix" @click="onPreview(index)"></image>
 				</view>
 				<view class="text">{{item.content}}</view>
-				<view class="author">作者—— {{item.author}} X {{item.height}}</view>
+				<view class="author">作者—— {{item.author}} </view>
 			</view>
 		</view>		
 		
