@@ -65,7 +65,7 @@
 			  <scroll-view scroll-x>
 				  <view class="box"  v-for="item in 8">
 					  <image
-					    src="../../common/images/preview_small.webp"
+					    src="https://mp-0cb878b7-99ec-44ea-8246-12b123304b05.cdn.bspapp.com/xxmBizhi/20231010/1696901099086_3215.jpg"
 					    mode="aspectFill"
 					  ></image>
 				  </view>
@@ -77,7 +77,7 @@
 	  		  <common-title>
 	  			  <template #name>专题精选</template>
 	  			  <template #custom>
-					  <navigator url="" class="more">More+</navigator>
+					  <navigator url="/pages/classify/classify" open-type="reLaunch" class="more">More+</navigator>
 				  </template>
 	  		  </common-title>
 	  		  <view class="content">

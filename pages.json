@@ -55,6 +55,13 @@
 				"navigationBarTitleText" : "萌宠案例",
 				"navigationBarBackgroundColor": "#CAF0DF"
 			}
+		},
+		{
+			"path" : "pages/classify/classify",
+			"style" : 
+			{
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
