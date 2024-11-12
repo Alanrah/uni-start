@@ -25,7 +25,7 @@
 
           <navigator
             v-else
-            :url="`/pages/classlist/classlist?${item.url}`"
+            :url="`/pages/class-list/class-list?${item.url}`"
             class="like"
           >
             <image :src="item.picurl" mode="aspectFill"></image>

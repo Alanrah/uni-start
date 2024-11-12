@@ -76,7 +76,7 @@ const getClassList = async ()=>{
 onShareAppMessage((e)=>{
 	return {
 		title:"咸虾米壁纸-"+pageName,
-		path:"/pages/classlist/classlist?id="+queryParams.classid+"&name="+pageName
+		path:"/pages/class-list/class-list?id="+queryParams.classid+"&name="+pageName
 	}
 })
 
