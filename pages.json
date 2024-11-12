@@ -4,7 +4,7 @@
 			"path" : "pages/index/index",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText": "推荐"
 			}
 		},
 		{
@@ -67,32 +67,31 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "百姓关注",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#fff",
 		"enablePullDownRefresh": true,
-		"backgroundColor": "#CAF0DF",
+		"backgroundColor": "#f8f8f8",
 		"onReachBottomDistance": 60
 	},
-	// "tabBar": {
-	// 	"color": "#7A7E83",
-	// 	"selectedColor": "#3cc51f",
-	// 	"borderStyle": "white",
-	// 	"backgroundColor": "#CAF0DF",
-	// 	"list": [{
-	// 		"pagePath": "pages/demo-index/index",
-	// 		"iconPath": "static/icon-index.png",
-	// 		"selectedIconPath": "static/icon-index-active.png",
-	// 		"text": "首页"
-	// 	}, {
-	// 		"pagePath": "pages/comment/comment",
-	// 		"iconPath": "static/icon-comment.png",
-	// 		"selectedIconPath": "static/icon-comment-active.png",
-	// 		"text": "留言"
-	// 	},{
-	// 		"pagePath": "pages/mine/mine",
-	// 		"iconPath": "static/icon-mine.png",
-	// 		"selectedIconPath": "static/icon-mine-active.png",
-	// 		"text": "我的"
-	// 	}]
-	// },
+	"tabBar": {
+		"color": "#9799a5",
+		"selectedColor": "#28b389",
+		"borderStyle": "white",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/home.png",
+			"selectedIconPath": "static/home-h.png",
+			"text": "推荐"
+		}, {
+			"pagePath": "pages/classify/classify",
+			"iconPath": "static/classify.png",
+			"selectedIconPath": "static/classify-h.png",
+			"text": "分类"
+		},{
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/user.png",
+			"selectedIconPath": "static/user-h.png",
+			"text": "我的"
+		}]
+	},
 	"uniIdRouter": {}
 }

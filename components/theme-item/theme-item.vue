@@ -10,7 +10,7 @@
 			<view class="tab" v-if="compareTimestamp(item.updateTime)">{{compareTimestamp(item.updateTime)}}前更新</view>
 		</navigator>
 		
-		<navigator url="/pages/classify/classify" open-type="reLaunch" class="box more" v-if="isMore">
+		<navigator url="/pages/classify/classify" open-type="switchTab" class="box more" v-if="isMore">
 			<image class="pic" src="../../common/images/more.jpg" mode="aspectFill"></image>
 			<view class="mask">
 				<uni-icons type="more-filled" size="34" color="#fff"></uni-icons>

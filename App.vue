@@ -15,4 +15,5 @@
 
 <style>
 	/*每个页面公共css */
+	@import "common/scss/common-style.scss"
 </style>
