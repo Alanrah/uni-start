@@ -70,6 +70,13 @@
 				"navigationBarTitleText" : "",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/class-list/class-list",
+			"style" : 
+			{
+				"navigationBarTitleText" : "专题"
+			}
 		}
 	],
 	"globalStyle": {

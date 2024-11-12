@@ -1,7 +1,7 @@
 <template>
 	<view class="themeItem">
 		<navigator 		
-		:url="'/pages/classlist/classlist?id='+item._id+'&name='+item.name" 
+		:url="'/pages/class-list/class-list?id='+item._id+'&name='+item.name" 
 		class="box" 
 		v-if="!isMore">
 			

@@ -16,7 +16,7 @@
 		<view class="section">
 			<view class="list">
 				<navigator 
-				url="/pages/classlist/classlist?name=我的下载&type=download" 
+				url="/pages/class-list/class-list?name=我的下载&type=download" 
 				class="row">
 					<view class="left">
 						<uni-icons type="download-filled" size="20" ></uni-icons>
@@ -29,7 +29,7 @@
 				</navigator>
 				
 				<navigator  
-				url="/pages/classlist/classlist?name=我的评分&type=score" 
+				url="/pages/class-list/class-list?name=我的评分&type=score" 
 				class="row">
 					<view class="left">
 						<uni-icons type="star-filled" size="20"></uni-icons>
