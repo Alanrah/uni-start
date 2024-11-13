@@ -11,7 +11,7 @@
 				</navigator>
 			</view>
 		</view>
-		
+		<!-- 注意： 这个用的特别好 -->
 		<view class="fill" :style="{height:getNavBarHeight()+'px'}">
 			
 		</view>

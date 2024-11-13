@@ -85,6 +85,28 @@
 			{
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/notice/notice",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+					"path" : "pages/notice/detail",
+					"style" : 
+					{
+						"navigationBarTitleText" : "公告详情",
+						"enablePullDownRefresh" : false
+					}
+				},
+		{
+			"path" : "pages/search/search",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 	],
 	"globalStyle": {

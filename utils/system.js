@@ -14,8 +14,9 @@ export const getTitleBarHeight = ()=>{
 export const  getNavBarHeight = ()=> getStatusBarHeight()+getTitleBarHeight();
 
 export const getLeftIconLeft = ()=> {
+	// 头条的小程序，默认左边有个小程序icon，右边还有个反馈按钮
 	// #ifdef MP-TOUTIAO
-		let {leftIcon:{left,width}}  = tt.getCustomButtonBoundingClientRect();
+		let {leftIcon:{left,width}}  = tt.getCustomButtonBoundingClientRect(); // 注意： 深度解构
 		return left+ parseInt(width);
 	// #endif
 	
