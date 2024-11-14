@@ -87,7 +87,7 @@ function network(){
 			type:classify[current.value].key
 		},
 		header:{
-			"access-key":"486972"
+			"access-key":"161287"
 		}
 	}).then(res=>{	
 		if(res.data.errCode === 0){			

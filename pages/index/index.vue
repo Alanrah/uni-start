@@ -130,7 +130,7 @@ const getDayRandom = async () => {
 };
 
 const getNotice = async () => {
-  let res = await apiGetNotice({ select: true });
+  let res = await apiGetNotice();
   noticeList.value = res.data;
 };
 

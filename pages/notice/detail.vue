@@ -16,8 +16,8 @@
 		
 		
 		<view class="content">		
-			<!-- <mp-html :content="detail.content" /> -->
-			<rich-text :nodes="detail.content"></rich-text>
+			<mp-html :content="detail.content" />
+			<!-- <rich-text :nodes="detail.content"></rich-text> -->
 		</view>
 		
 		<view class="count">

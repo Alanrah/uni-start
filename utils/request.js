@@ -10,16 +10,20 @@ export function request(config={}){
 	} = config
 	
 	url = BASE_URL+url
-	header['access-key'] = "486972"
+	header['access-key'] = "161287"
 	
 	
-	return new Promise((resolve,reject)=>{		
+	return new Promise((resolve,reject)=>{
+		// uni.showLoading({
+		// 			title: "加载中..."
+		// 		})
 		uni.request({
 			url,
 			data,
 			method,
 			header,
 			success:res=>{
+				// uni.hideLoading();
 				if(res.data.errCode===0){
 					resolve(res.data)
 				}else if(res.data.errCode === 400){
@@ -38,8 +42,9 @@ export function request(config={}){
 				}				
 			},
 			fail:err=>{
+				// uni.hideLoading();
 				reject(err)
 			}
 		})
-	})
+	});
 }

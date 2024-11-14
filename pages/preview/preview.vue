@@ -250,7 +250,7 @@
 	}
 
 
-	//返回上一页
+	//注意：返回上一页
 	const goBack = () => {
 		uni.navigateBack({
 			success: () => {
@@ -274,7 +274,7 @@
 			showCancel: false
 		})
 		// #endif
-
+		// 注意：小程序下获取网络图片信息需先配置download域名白名单才能生效
 		// #ifndef H5
 		try {
 
@@ -376,7 +376,8 @@ onShareTimeline(()=>{
 
 
 
-
+// 注意： 这里主要是为了每次进入页面，只加载当前页面的前一张、当前张、后一张图片，防止一次性加载过多
+// 提升用户体验
 	function readImgsFun() {
 		readImgs.value.push(
 			currentIndex.value <= 0 ? classList.value.length - 1 : currentIndex.value - 1,
